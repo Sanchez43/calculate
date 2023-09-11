@@ -45,8 +45,6 @@ public class Calculator {
                     number2= convertor.romanToInt(data[1]);
                     if ((number1>10) || (number2 > 10)) {
                         throw new RuntimeException("Вводимые числа не должны быть больше 10(X)");
-                    }else if(number1<number2){
-                        throw new RuntimeException("Римские чила не могут быть отрицательные");
                     }
                 }else{
                     try{
@@ -66,6 +64,9 @@ public class Calculator {
                         result = number1+number2;
                         break;
                     case "-":
+                        if (number1<number2){
+                        throw new RuntimeException("Римские чила не могут быть отрицательные");
+                    }
                         result = number1 - number2;
                         break;
                     case "*":
