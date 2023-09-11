@@ -64,7 +64,7 @@ public class Calculator {
                         result = number1+number2;
                         break;
                     case "-":
-                        if (number1<number2){
+                        if ((number1 < number2) && (isRomanNumber)){
                         throw new RuntimeException("Римские чила не могут быть отрицательные");
                     }
                         result = number1 - number2;
